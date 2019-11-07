@@ -21,3 +21,10 @@ def gifts(request):
     Renders gifts page
     '''
     return render(request, 'gifts.html')
+
+
+def rsvp(request):
+    '''
+    Renders rsvp page
+    '''
+    return render(request, 'rsvp.html')
