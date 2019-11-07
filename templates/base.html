@@ -14,7 +14,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <!-- Link for Favicon -->
-    <link rel="icon" sizes="192x192" href="" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
 
 </head>
 <body>
@@ -26,7 +26,7 @@
         <nav class="nav-extended">
             <div class="nav-wrapper">
                 <a href="/" class="brand-logo collection-item avatar"  aria-label="Logo and link to home page">
-                    <img class="circle" src="" alt="Sunny &amp; Kim Picture">
+                    <img class="circle" src="{% static 'img/logo.png' %}" alt="Sunny &amp; Kim Picture">
                     <span class="brand-logo-title">Sunny &amp; Kim</span>
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"  aria-label="Sidenav trigger">
@@ -64,7 +64,7 @@
             <ul class="sidenav" id="mobile-demo">
                 <li>
                     <a href="/" class="brand-logo collection-item avatar"  aria-label="Logo and link to home page">
-                        <img class="circle" src="" alt="Sunny &amp; Kim Picture">
+                        <img class="circle" src="{% static 'img/logo.png' %}" alt="Sunny &amp; Kim Picture">
                         <span class="brand-logo-title">Sunny &amp; Kim</span>
                     </a>
                 </li>
