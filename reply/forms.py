@@ -62,3 +62,14 @@ class DetailForm(forms.ModelForm):
         max_length=2000,
         widget=forms.Textarea(),
         required=False)
+
+    class Meta:
+        model = Detail
+        fields = [
+            "guest_name",
+            "attending",
+            "not_attending",
+            "favourite_song",
+            "dietary_requirements",
+            "additional_info",
+        ]
