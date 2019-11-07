@@ -7,3 +7,10 @@ def home(request):
     Renders home page
     '''
     return render(request, 'index.html')
+
+
+def location(request):
+    '''
+    Renders home page
+    '''
+    return render(request, 'location.html')
