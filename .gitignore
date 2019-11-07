@@ -11,4 +11,4 @@ htmlcov/
 .coverage
 .coveragerc
 .theia/
-myvenv/
+myvenv
