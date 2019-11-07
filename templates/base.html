@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -116,6 +117,17 @@
             {% block content %}
             {% endblock %}
     </main>
+
+    <!--FOOTER-->
+    <footer class="page-footer container-fluid">
+        <div class="container">
+            <div class="row center-align">
+                <div class="col s12">
+                    <p>&copy; Sunny &amp; Kim {% now 'Y' %}</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- jQuery script tag -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
