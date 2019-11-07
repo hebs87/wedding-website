@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import DetailForm
 
 
 # Create your views here.
@@ -27,4 +28,10 @@ def rsvp(request):
     '''
     Renders rsvp page
     '''
-    return render(request, 'rsvp.html')
+    detail_form = DetailForm()
+
+    context = {
+        'detail_form': detail_form,
+    }
+
+    return render(request, 'rsvp.html', context)
