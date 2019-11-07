@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-class Detail(model.Model):
+class Detail(models.Model):
     '''
     Allows users to submit their details
     '''
