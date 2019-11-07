@@ -30,33 +30,33 @@ class DetailForm(forms.ModelForm):
         ("No", "No"),
     )
 
-    guest_name = models.ChoiceField(
+    guest_name = forms.ChoiceField(
         label="Your Name Or Group",
         choices=GUEST_CHOICES,
         required=True)
-    attending = models.ChoiceField(
+    attending = forms.ChoiceField(
         label="Can You Make It?",
         choices=ATTENDING_CHOICES,
         required=True)
-    not_attending = models.CharField(
+    not_attending = forms.CharField(
         label="Anyone In Your Group Can't Make It?",
         min_length=2,
         max_length=100,
         widget=forms.TextInput(),
         required=False)
-    favourite_song = models.CharField(
+    favourite_song = forms.CharField(
         label="Pick A Song For Our Playlist!",
         min_length=2,
         max_length=100,
         widget=forms.TextInput(),
         required=True)
-    dietary_requirements = models.CharField(
+    dietary_requirements = forms.CharField(
         label="Any Dietary Requirements?",
         min_length=2,
         max_length=100,
         widget=forms.TextInput(),
         required=False)
-    additional_info = models.CharField(
+    additional_info = forms.CharField(
         label="Anything Else We Need To Know?",
         min_length=2,
         max_length=2000,
