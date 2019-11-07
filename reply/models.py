@@ -51,3 +51,29 @@ class Attending(models.Model):
 
     def __str__(self):
         return self.attending
+
+
+class Detail(model.Model):
+    '''
+    Allows users to submit their details
+    '''
+    guest_name = models.ForeignKey(
+        Guest,
+        null=True,
+        on_delete=models.CASCADE)
+    attending = models.ForeignKey(
+        Attending,
+        null=True,
+        on_delete=models.CASCADE)
+    not_attending = models.CharField(
+        max_length=100,
+        blank=False)
+    favourite_song = models.CharField(
+        max_length=100,
+        blank=False)
+    dietary_requirements = models.CharField(
+        max_length=100,
+        blank=False)
+    additional_info = models.TextField(
+        max_length=2000,
+        blank=False)
