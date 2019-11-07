@@ -98,6 +98,16 @@
 
     </header>
 
+    {% if messages %}
+        <div class="flash-message center-align" id="flash_message">
+            <div class="messages">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
     <!-- jQuery script tag -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- Materialize script tag -->
