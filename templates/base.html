@@ -9,7 +9,7 @@
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <!-- FontAwesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <!--Link for Favicon-->
@@ -18,7 +18,85 @@
 </head>
 <body>
 
+    <header class="container-fluid">
 
+        <!--NAVBAR-->
+        <!--Main Nav-->
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo collection-item avatar"  aria-label="Logo and link to home page">
+                    <img class="circle" src="" alt="Sunny &amp; Kim Picture">
+                    <span class="brand-logo-title">Sunny &amp; Kim</span>
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"  aria-label="Sidenav trigger">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="/" aria-label="Home page">
+                            <i class="btn-icon fas fa-ring" aria-hidden="true"></i>
+                            <span class="btn-text uppercase">Wedding</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" aria-label="Location page">
+                            <i class="btn-icon fas fa-ticket-alt" aria-hidden="true"></i>
+                            <span class="btn-text uppercase">Location</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" aria-label="Gifts page">
+                            <i class="btn-icon fas fa-chart-bar" aria-hidden="true"></i>
+                            <span class="btn-text uppercase">Gifts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" aria-label="RSVP page">
+                            <i class="btn-icon fas fa-user" aria-hidden="true"></i>
+                            <span class="btn-text uppercase">RSVP</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--End Main Nav-->
+            <!--Mobile Side Nav-->
+            <ul class="sidenav" id="mobile-demo">
+                <li>
+                    <a href="/" class="brand-logo collection-item avatar"  aria-label="Logo and link to home page">
+                        <img class="circle" src="" alt="Sunny &amp; Kim Picture">
+                        <span class="brand-logo-title">Sunny &amp; Kim</span>
+                    </a>
+                </li>
+                <li class="sidenav-home">
+                    <a href="/" aria-label="Home page">
+                        <i class="btn-icon fas fa-ring" aria-hidden="true"></i>
+                        <span class="btn-text uppercase">Wedding</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/" aria-label="Location page">
+                        <i class="btn-icon fas fa-ticket-alt" aria-hidden="true"></i>
+                        <span class="btn-text uppercase">Location</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/" aria-label="Gifts page">
+                        <i class="btn-icon fas fa-chart-bar" aria-hidden="true"></i>
+                        <span class="btn-text uppercase">Gifts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/" aria-label="RSVP page">
+                        <i class="btn-icon fas fa-user" aria-hidden="true"></i>
+                        <span class="btn-text uppercase">RSVP</span>
+                    </a>
+                </li>
+            </ul>
+            <!--End Mobile Side Nav-->
+        </nav>
+        <!--END NAVBAR-->
+
+    </header>
 
     <!-- jQuery script tag -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
