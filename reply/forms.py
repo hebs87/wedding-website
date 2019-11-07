@@ -45,6 +45,7 @@ class DetailForm(forms.ModelForm):
         min_length=2,
         max_length=100,
         widget=forms.TextInput(),
+        initial="N/A",
         required=False)
     favourite_song = forms.CharField(
         label="Pick A Song For Our Playlist!",
@@ -57,12 +58,14 @@ class DetailForm(forms.ModelForm):
         min_length=2,
         max_length=100,
         widget=forms.TextInput(),
+        initial="N/A",
         required=False)
     additional_info = forms.CharField(
         label="Anything Else We Need To Know?",
         min_length=2,
         max_length=2000,
         widget=forms.Textarea(),
+        initial="N/A",
         required=False)
 
     class Meta:
