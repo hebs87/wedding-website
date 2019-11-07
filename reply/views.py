@@ -11,6 +11,13 @@ def home(request):
 
 def location(request):
     '''
-    Renders home page
+    Renders location page
     '''
     return render(request, 'location.html')
+
+
+def gifts(request):
+    '''
+    Renders gifts page
+    '''
+    return render(request, 'gifts.html')
