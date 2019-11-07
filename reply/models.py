@@ -32,3 +32,22 @@ class Guest(models.Model):
 
     def __str__(self):
         return self.guest_name
+
+
+class Attending(models.Model):
+    '''
+    Provides a Yes/No choice for whether guests
+    are attending
+    '''
+    ATTENDING_CHOICES = (
+        ("Yes", "Yes"),
+        ("No", "No"),
+    )
+
+    attending = models.CharField(
+        max_length=3,
+        unique=True,
+        choices=GUEST_CHOICES)
+
+    def __str__(self):
+        return self.attending
