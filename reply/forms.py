@@ -7,6 +7,7 @@ class DetailForm(forms.ModelForm):
     Form that allows users to submit their RSVP information
     '''
     GUEST_CHOICES = (
+        ("Choose an option...", "Choose an option..."),
         ("Ash and Saf", "Ash and Saf"),
         ("Becky and Stu", "Becky and Stu"),
         ("Brittany and Jake", "Brittany and Jake"),
@@ -26,6 +27,7 @@ class DetailForm(forms.ModelForm):
     )
 
     ATTENDING_CHOICES = (
+        ("Choose an option...", "Choose an option..."),
         ("Yes", "Yes"),
         ("No", "No"),
     )
