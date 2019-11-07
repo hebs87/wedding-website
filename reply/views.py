@@ -39,7 +39,7 @@ def rsvp(request):
         if detail_form.is_valid():
             # Ensure the guest_name or attending values are valid options
             if guest_name != "Choose an option..."\
-              or attending != "Choose an option...":
+              and attending != "Choose an option...":
                 detail_form.save()
                 # If the user selects 'No' from the attending options
                 if attending == "No":
@@ -52,8 +52,6 @@ def rsvp(request):
             else:
                 messages.error(request,
                                "Please select a valid dropdown option")
-                return redirect(home)
-
     else:
         detail_form = DetailForm()
 

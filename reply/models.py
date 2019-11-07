@@ -10,7 +10,7 @@ class Detail(models.Model):
         max_length=27,
         blank=False)
     attending = models.CharField(
-        max_length=3,
+        max_length=19,
         blank=False)
     not_attending = models.CharField(
         max_length=100,
