@@ -24,3 +24,7 @@ class Detail(model.Model):
     additional_info = models.TextField(
         max_length=2000,
         blank=False)
+
+    def __str__(self):
+        return "{0} - {1}".format(
+            self.guest_name, self.attending)
