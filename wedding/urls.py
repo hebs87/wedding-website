@@ -20,5 +20,5 @@ from reply.views import home as reply_home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', reply_home, name="home"),
-    path('reply/', include('reply.urls'))
+    path('reply/', include('reply.urls')),
 ]
