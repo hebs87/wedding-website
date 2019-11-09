@@ -10,6 +10,15 @@
     Orlando, Florida
 {% endblock %}
 
+{% block button %}
+
+    <a class="btn waves-effect waves-light sm-md-btn" href="{% url 'rsvp' %}" aria-label="RSVP button">
+        RSVP
+        <i class="fas fa-comment-dots icon-right" aria-hidden="true"></i>
+    </a>
+
+{% endblock %}
+
 {% block content %}
 
     <div class="row center-align">
