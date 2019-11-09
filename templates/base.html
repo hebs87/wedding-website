@@ -26,8 +26,7 @@
         <nav class="nav-extended">
             <div class="nav-wrapper">
                 <a href="{% url 'home' %}" class="brand-logo collection-item avatar"  aria-label="Logo and link to home page">
-                    <img class="circle" src="{% static 'img/logo.png' %}" alt="Sunny &amp; Kim Picture">
-                    <span class="brand-logo-title">Sunny &amp; Kim</span>
+                    Sunny &amp; Kim
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"  aria-label="Sidenav trigger">
                     <i class="fas fa-bars" aria-hidden="true"></i>
@@ -64,8 +63,7 @@
             <ul class="sidenav" id="mobile-demo">
                 <li>
                     <a href="{% url 'home' %}" class="brand-logo collection-item avatar"  aria-label="Logo and link to home page">
-                        <img class="circle" src="{% static 'img/logo.png' %}" alt="Sunny &amp; Kim Picture">
-                        <span class="brand-logo-title">Sunny &amp; Kim</span>
+                        Sunny &amp; Kim
                     </a>
                 </li>
                 <li class="sidenav-home">
@@ -111,18 +109,18 @@
 
     <!-- MAIN CONTENT -->
     <main class="container-fluid">
-            <div class="main-wrapper">
-                <!-- Opaque overlay over the image to add some contrast for the text -->
-                <div class="opaque-overlay">&nbsp;</div>
-                <!-- Page Heading and Supporting Text -->
-                <div class="tag">
-                    <h1 class="page-title center-align">{% block page_heading %}{% endblock %}</h1>
-                    <h5 class="title-helper center-align">{% block heading_helper %}{% endblock %}</h5>
-                </div>
-                <img class="responsive-image main-img" src="{% static 'img/rings.jpg' %}" alt="Wedding Rings">
+        <div class="main-wrapper">
+            <!-- Opaque overlay over the image to add some contrast for the text -->
+            <div class="opaque-overlay">&nbsp;</div>
+            <!-- Page Heading and Supporting Text -->
+            <div class="tag">
+                <h1 class="page-title center-align">{% block page_heading %}{% endblock %}</h1>
+                <h5 class="title-helper center-align">{% block heading_helper %}{% endblock %}</h5>
             </div>
-            {% block content %}
-            {% endblock %}
+            <img class="responsive-image main-img" src="{% static 'img/rings.jpg' %}" alt="Wedding Rings">
+        </div>
+        {% block content %}
+        {% endblock %}
     </main>
 
     <!--FOOTER-->
