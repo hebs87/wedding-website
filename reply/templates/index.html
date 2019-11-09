@@ -22,10 +22,12 @@
 {% block content %}
 
     <div class="row center-align">
-        <div class="col s12">
+        <!-- Our Story Section -->
+        <div class="col s12 story-wrapper">
             <h3>Our Story</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa error quis sit, ipsum explicabo doloremque sint neque sapiente architecto dignissimos. Pariatur ex aliquam eligendi, possimus neque molestiae laboriosam libero porro praesentium cumque dolor optio est quam magni error omnis nisi deleniti nam similique animi assumenda quisquam! Laudantium aut beatae animi?</p>
         </div>
+        <!-- Carousel Section -->
         <div class="col s12 carousel-wrapper">
             <div class="carousel">
                 <a class="carousel-item" href="#one!"><img src="{% static 'img/sk1.jpg' %}"></a>
@@ -45,5 +47,17 @@
             </div>
         </div>
     </div>
+
+    <div class="wedding-day-wrapper">
+        <!-- Opaque overlay over the image to add some contrast for the text -->
+        <div class="opaque-overlay">&nbsp;</div>
+        <!-- Heading and Supporting Text -->
+        <div class="tag">
+            <h1 class="page-title">Wedding Day</h1>
+            <h5 class="title-helper italic">1 June, 2021</h5>
+        </div>
+        <img class="responsive-image wedding-img" src="{% static 'img/wedding-day.jpg' %}" alt="Wedding Day Image">
+    </div>
+
 
 {% endblock %}
