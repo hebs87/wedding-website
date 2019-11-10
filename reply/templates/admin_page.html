@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Gifts{% endblock %}
+
+{% block content %}
+
+    <div class="guests-header-wrapper">
+        <!-- Opaque overlay over the image to add some contrast for the text -->
+        <div class="opaque-overlay">&nbsp;</div>
+        <!-- Page Heading and Supporting Text -->
+        <div class="tag">
+            <h1 class="page-title center-align">Guests</h1>
+            <h5 class="title-helper center-align italic">Who's coming?</h5>
+        </div>
+        <img class="responsive-image guests-header-img" src="{% static 'img/wedding-guests.jpg' %}" alt="Wedding Guests">
+    </div>
+
+    <div class="row center-align text">
+        <!-- Attending Section -->
+        <div class="col s12 gifts-wrapper">
+            <h3 class="dancing-script">Who Can Make It?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa error quis sit, ipsum explicabo doloremque sint neque sapiente architecto dignissimos. Pariatur ex aliquam eligendi, possimus neque molestiae laboriosam libero porro praesentium cumque dolor optio est quam magni error omnis nisi deleniti nam similique animi assumenda quisquam! Laudantium aut beatae animi?</p>
+        </div>
+    </div>
+
+    <div class="row center-align text">
+        <!-- Not Attending Section -->
+        <div class="col s12 gifts-wrapper">
+            <h3 class="dancing-script">Who Can't Make It?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa error quis sit, ipsum explicabo doloremque sint neque sapiente architecto dignissimos. Pariatur ex aliquam eligendi, possimus neque molestiae laboriosam libero porro praesentium cumque dolor optio est quam magni error omnis nisi deleniti nam similique animi assumenda quisquam! Laudantium aut beatae animi?</p>
+        </div>
+    </div>
+
+{% endblock %}
