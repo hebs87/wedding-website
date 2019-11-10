@@ -63,6 +63,7 @@ def rsvp(request):
 
     return render(request, 'rsvp.html', context)
 
+
 @login_required
 def admin(request):
     '''
