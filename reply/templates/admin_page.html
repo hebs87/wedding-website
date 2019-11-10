@@ -16,9 +16,9 @@
         <img class="responsive-image guests-header-img" src="{% static 'img/wedding-guests.jpg' %}" alt="Wedding Guests">
     </div>
 
-    <div class="row center-align text attending-wrapper">
+    <div class="row center-align text">
         <!-- Attending Section -->
-        <div class="col s12 gifts-wrapper">
+        <div class="col s12 attending-wrapper">
             <h3 class="dancing-script">Who Can Make It?</h3>
             {% if details %}
                 {% for detail in details %}
@@ -54,9 +54,9 @@
         </div>
     </div>
 
-    <div class="row center-align text not-attending-wrapper">
+    <div class="row center-align text">
         <!-- Not Attending Section -->
-        <div class="col s12 gifts-wrapper">
+        <div class="col s12 not-attending-wrapper">
             <h3 class="dancing-script">Who Can't Make It?</h3>
             {% if details %}
                 {% for detail in details %}
