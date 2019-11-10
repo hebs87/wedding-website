@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import DetailForm
+from .models import Detail
 
 
 # Create your views here.
@@ -60,3 +62,16 @@ def rsvp(request):
     }
 
     return render(request, 'rsvp.html', context)
+
+@login_required
+def admin(request):
+    '''
+    Renders admin_page.html and injects reply data into the page
+    '''
+    details = Detail.objects.all()
+
+    context = {
+        'details': details
+    }
+
+    return render(request, 'admin_page.html', context)
