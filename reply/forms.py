@@ -53,6 +53,12 @@ class DetailForm(forms.ModelForm):
         max_length=100,
         widget=forms.TextInput(),
         required=True)
+    favourite_drink = forms.CharField(
+        label="What's Your Drink?",
+        min_length=2,
+        max_length=100,
+        widget=forms.TextInput(),
+        required=True)
     dietary_requirements = forms.CharField(
         label="Any Dietary Requirements?",
         min_length=2,
@@ -75,6 +81,7 @@ class DetailForm(forms.ModelForm):
             "attending",
             "not_attending",
             "favourite_song",
+            "favourite_drink",
             "dietary_requirements",
             "additional_info",
         ]
