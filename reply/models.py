@@ -19,6 +19,10 @@ class Detail(models.Model):
     favourite_song = models.CharField(
         max_length=100,
         blank=False)
+    favourite_drink = models.CharField(
+        max_length=100,
+        blank=False
+    )
     dietary_requirements = models.CharField(
         max_length=100,
         blank=False,
