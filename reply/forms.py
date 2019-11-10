@@ -33,7 +33,7 @@ class DetailForm(forms.ModelForm):
     )
 
     guest_name = forms.ChoiceField(
-        label="Your Name Or Group",
+        label="Guest / Group",
         choices=GUEST_CHOICES,
         required=True)
     attending = forms.ChoiceField(
