@@ -4,10 +4,18 @@
 
 {% block title %}RSVP{% endblock %}
 
-{% block page_heading %}RSVP{% endblock %}
-{% block heading_helper %}Please respond by 1 June, 2020{% endblock %}
-
 {% block content %}
+
+    <div class="rsvp-header-wrapper">
+        <!-- Opaque overlay over the image to add some contrast for the text -->
+        <div class="opaque-overlay">&nbsp;</div>
+        <!-- Page Heading and Supporting Text -->
+        <div class="tag">
+            <h1 class="page-title center-align">RSVP</h1>
+            <h5 class="title-helper center-align italic">Please respond by 31 December, 2020</h5>
+        </div>
+        <img class="responsive-image rsvp-header-img" src="{% static 'img/wedding-rsvp.jpg' %}" alt="Wedding RSVP">
+    </div>
 
     <div class="row center-align text">
         <!-- RSVP Poem Section -->

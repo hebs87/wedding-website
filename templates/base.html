@@ -109,17 +109,6 @@
 
     <!-- MAIN CONTENT -->
     <main class="container-fluid center-align">
-        <div class="main-wrapper">
-            <!-- Opaque overlay over the image to add some contrast for the text -->
-            <div class="opaque-overlay">&nbsp;</div>
-            <!-- Page Heading and Supporting Text -->
-            <div class="tag">
-                <h1 class="page-title center-align">{% block page_heading %}{% endblock %}</h1>
-                <h5 class="title-helper center-align italic">{% block heading_helper %}{% endblock %}</h5>
-                {% block button %}{% endblock %}
-            </div>
-            <img class="responsive-image main-img" src="{% static 'img/rings.jpg' %}" alt="Wedding Rings">
-        </div>
         {% block content %}
         {% endblock %}
     </main>

@@ -3,10 +3,18 @@
 
 {% block title %}Gifts{% endblock %}
 
-{% block page_heading %}Gifts{% endblock %}
-{% block heading_helper %}Contribute to our Honeymoon fund{% endblock %}
-
 {% block content %}
+
+    <div class="gifts-header-wrapper">
+        <!-- Opaque overlay over the image to add some contrast for the text -->
+        <div class="opaque-overlay">&nbsp;</div>
+        <!-- Page Heading and Supporting Text -->
+        <div class="tag">
+            <h1 class="page-title center-align">Gifts</h1>
+            <h5 class="title-helper center-align italic">Contribute to our Honeymoon fund</h5>
+        </div>
+        <img class="responsive-image gifts-header-img" src="{% static 'img/wedding-gifts.jpg' %}" alt="Wedding Gifts">
+    </div>
 
     <div class="row center-align text">
         <!-- Gifts Section -->

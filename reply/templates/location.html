@@ -3,10 +3,18 @@
 
 {% block title %}Location{% endblock %}
 
-{% block page_heading %}Reunion Resort{% endblock %}
-{% block heading_helper %}Orlando, Florida{% endblock %}
-
 {% block content %}
+
+    <div class="location-wrapper">
+        <!-- Opaque overlay over the image to add some contrast for the text -->
+        <div class="opaque-overlay">&nbsp;</div>
+        <!-- Page Heading and Supporting Text -->
+        <div class="tag">
+            <h1 class="page-title center-align">Reunion Resort</h1>
+            <h5 class="title-helper center-align italic">Orlando, Florida</h5>
+        </div>
+        <img class="responsive-image location-img" src="{% static 'img/wedding-location.jpg' %}" alt="Wedding Location">
+    </div>
 
     <div class="row center-align">
         <!-- Villa Section -->
