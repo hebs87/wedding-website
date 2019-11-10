@@ -21,8 +21,8 @@ class Detail(models.Model):
         blank=False)
     favourite_drink = models.CharField(
         max_length=100,
-        blank=False
-    )
+        blank=False,
+        default="")
     dietary_requirements = models.CharField(
         max_length=100,
         blank=False,
