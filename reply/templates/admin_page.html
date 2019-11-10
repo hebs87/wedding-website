@@ -16,19 +16,69 @@
         <img class="responsive-image guests-header-img" src="{% static 'img/wedding-guests.jpg' %}" alt="Wedding Guests">
     </div>
 
-    <div class="row center-align text">
+    <div class="row center-align text attending-wrapper">
         <!-- Attending Section -->
         <div class="col s12 gifts-wrapper">
             <h3 class="dancing-script">Who Can Make It?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa error quis sit, ipsum explicabo doloremque sint neque sapiente architecto dignissimos. Pariatur ex aliquam eligendi, possimus neque molestiae laboriosam libero porro praesentium cumque dolor optio est quam magni error omnis nisi deleniti nam similique animi assumenda quisquam! Laudantium aut beatae animi?</p>
+            {% if details %}
+                {% for detail in details %}
+                    {% if detail.attending == "Yes" %}
+                        <p>
+                            <span class="bold">Guest / Party:</span>
+                            <span class="italic">{{ detail.guest_name }}</span>
+                            <br/>
+                            {% if detail.not_attending !=  "N/A" %}
+                                <span class="bold">Not Coming:</span>
+                                <span class="italic">{{ detail.not_attending }}</span>
+                                <br/>
+                            {% endif %}
+                            <span class="bold">Favourite Song:</span>
+                            <span class="italic">{{ detail.favourite_song }}</span>
+                            <br/>
+                            {% if detail.dietary_requirements !=  "N/A" %}
+                                <span class="bold">Dietary Requirements:</span>
+                                <span class="italic">{{ detail.dietary_requirements }}</span>
+                                <br/>
+                            {% endif %}
+                            {% if detail.additional_info !=  "N/A" %}
+                                <span class="bold">Additional Info:</span>
+                                <span class="italic">{{ detail.additional_info }}</span>
+                                <br/>
+                            {% endif %}
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p class="italic">No attending guests have replied yet!</p>
+            {% endif %}
         </div>
     </div>
 
-    <div class="row center-align text">
+    <div class="row center-align text not-attending-wrapper">
         <!-- Not Attending Section -->
         <div class="col s12 gifts-wrapper">
             <h3 class="dancing-script">Who Can't Make It?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa error quis sit, ipsum explicabo doloremque sint neque sapiente architecto dignissimos. Pariatur ex aliquam eligendi, possimus neque molestiae laboriosam libero porro praesentium cumque dolor optio est quam magni error omnis nisi deleniti nam similique animi assumenda quisquam! Laudantium aut beatae animi?</p>
+            {% if details %}
+                {% for detail in details %}
+                    {% if detail.attending == "No" %}
+                        <p>
+                            <span class="bold">Guest / Party:</span>
+                            <span class="italic">{{ detail.guest_name }}</span>
+                            <br/>
+                            <span class="bold">Favourite Song:</span>
+                            <span class="italic">{{ detail.favourite_song }}</span>
+                            <br/>
+                            {% if detail.additional_info !=  "N/A" %}
+                                <span class="bold">Additional Info:</span>
+                                <span class="italic">{{ detail.additional_info }}</span>
+                                <br/>
+                            {% endif %}
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p class="italic">No non-attending guests have replied yet!</p>
+            {% endif %}
         </div>
     </div>
 
