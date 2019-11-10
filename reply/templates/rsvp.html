@@ -45,13 +45,13 @@
                             {{ detail_form.additional_info | materializecss:'icon=fas fa-comment' }}
                         </div>
                         <!--Add and Cancel buttons-->
-                        <div class="col s12">
-                            <button class="btn waves-effect waves-light add-btn sm-md-btn" type="submit" aria-label="Submit button">
-                                <span class="hide-on-small-and-down">Submit</span>
-                                <i class="fas fa-plus-circle icon-right" aria-hidden="true"></i>
+                        <div class="col s12 btn-wrapper">
+                            <button class="btn waves-effect waves-light add-btn standard-btn" type="submit" aria-label="Submit button">
+                                Submit
+                                <i class="fas fa-check-circle icon-right" aria-hidden="true"></i>
                             </button>
-                            <a class="btn waves-effect waves-light sm-md-btn" href="{% url 'rsvp' %}" aria-label="Reset button"">
-                                <span class="hide-on-small-and-down">Reset</span>
+                            <a class="btn waves-effect waves-light standard-btn" href="{% url 'rsvp' %}" aria-label="Reset button"">
+                                Reset
                                 <i class="fas fa-times-circle icon-right" aria-hidden="true"></i>
                             </a>
                         </div>
