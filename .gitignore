@@ -1,9 +1,9 @@
 *.pyc
-.c9
-.~c9
 __pycache__
 htmlcov/
 .coverage
 .coveragerc
-.theia/
-myvenv/
+venv
+*.sqlite3
+media
+static
