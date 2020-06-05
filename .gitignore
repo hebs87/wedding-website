@@ -3,7 +3,8 @@ __pycache__
 htmlcov/
 .coverage
 .coveragerc
-venv
+venv/
 *.sqlite3
 media
 static
+.idea/
