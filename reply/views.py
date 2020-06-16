@@ -20,13 +20,6 @@ def location(request):
     return render(request, 'location.html')
 
 
-def gifts(request):
-    '''
-    Renders gifts page
-    '''
-    return render(request, 'gifts.html')
-
-
 def rsvp(request):
     '''
     Renders rsvp page and allows users to reply
