@@ -5,6 +5,7 @@ from .models import Detail
 class DetailForm(forms.ModelForm):
     '''
     Form that allows users to submit their RSVP information
+    TODO: Amend guest list choices
     '''
     GUEST_CHOICES = (
         ("Choose an option...", "Choose an option..."),
