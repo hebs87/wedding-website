@@ -1,5 +1,5 @@
 from django import forms
-from .models import Detail
+from .models import RSVP
 
 
 class DetailForm(forms.ModelForm):
@@ -76,7 +76,7 @@ class DetailForm(forms.ModelForm):
         required=False)
 
     class Meta:
-        model = Detail
+        model = RSVP
         fields = [
             "guest_name",
             "attending",

@@ -1,30 +1,36 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from rest_framework import viewsets
+from django.http import HttpResponseRedirect
 from .forms import DetailForm
-from .models import Detail
+from .models import RSVP
+from .serializers import RSVPSerializer
 
 
 # Create your views here.
+# TODO: Remove when migrated to React
 def home(request):
-    '''
+    """
     Renders home page
-    '''
+    """
     return render(request, 'index.html')
 
 
+# TODO: Remove when migrated to React
 def location(request):
-    '''
+    """
     Renders location page
-    '''
+    """
     return render(request, 'location.html')
 
 
+# TODO: Remove when migrated to React - replaced with ViewSet instead
 def rsvp(request):
-    '''
+    """
     Renders rsvp page and allows users to reply
     to the invitation by entering their details
-    '''
+    """
     if request.method == "POST":
         detail_form = DetailForm(request.POST)
         # Get the guest_name value from the form
@@ -57,12 +63,17 @@ def rsvp(request):
     return render(request, 'rsvp.html', context)
 
 
+class RSVPViewSet(viewsets.ModelViewSet):
+    queryset = RSVP.objects.all()
+    serializer_class = RSVPSerializer
+
+
 @login_required
 def admin(request):
-    '''
+    """
     Renders admin_page.html and injects reply data into the page
-    '''
-    details = Detail.objects.all()
+    """
+    details = RSVP.objects.all()
 
     context = {
         'details': details
