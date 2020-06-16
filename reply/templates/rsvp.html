@@ -14,6 +14,7 @@
             <h1 class="page-title center-align">RSVP</h1>
             <h5 class="title-helper center-align italic">Please respond by 31 December, 2020</h5>
         </div>
+        <!-- TODO: Change picture -->
         <img class="responsive-image rsvp-header-img" src="{% static 'img/wedding-rsvp.jpg' %}" alt="Wedding RSVP">
     </div>
 
@@ -21,6 +22,7 @@
         <!-- RSVP Poem Section -->
         <div class="col s12 rsvp-poem-wrapper">
             <h3 class="dancing-script">See You There?</h3>
+            <!-- TODO: Replace text -->
             <p>
                 As we said on page one,
                 <br/>
@@ -43,6 +45,7 @@
             <form id="rsvp_detail_form" class="col s12" method="POST">
                 <div class="rsvp-wrapper center-align">
                     <div class="row">
+                        <!-- TODO: Amend guest list -->
                         <div class="col s12">
                             {% csrf_token %}
                             {{ detail_form.guest_name | materializecss:'icon=fas fa-users' }}
