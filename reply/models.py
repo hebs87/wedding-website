@@ -4,9 +4,9 @@ from django.db import models
 # Create your models here.
 # TODO: Add guest list model and have guest_name field in Detail model as FK?
 class Detail(models.Model):
-    '''
+    """
     Allows users to submit their details
-    '''
+    """
     guest_name = models.CharField(
         max_length=27,
         blank=False)
