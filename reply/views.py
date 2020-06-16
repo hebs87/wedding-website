@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from rest_framework import viewsets
-from django.http import HttpResponseRedirect
 from .forms import DetailForm
 from .models import RSVP
 from .serializers import RSVPSerializer
