@@ -1,10 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from rest_framework import viewsets
 from .forms import DetailForm
 from .models import RSVP
-from .serializers import RSVPSerializer
 
 
 # Create your views here.
@@ -60,11 +58,6 @@ def rsvp(request):
     }
 
     return render(request, 'rsvp.html', context)
-
-
-class RSVPViewSet(viewsets.ModelViewSet):
-    queryset = RSVP.objects.all()
-    serializer_class = RSVPSerializer
 
 
 @login_required
